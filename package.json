@@ -2,7 +2,7 @@
   "name": "UnSecretSanta",
   "version": "0.1.0",
   "author": "jsheneberger@gmail.com",
-  "main": "UnSecretSanta.js",
+  "main": "index.js",
   "devDependencies": {
     "mocha": "^2.3.4",
     "should": "^7.1.1"
