@@ -17,6 +17,18 @@ var couples = {
     "Sally": "Jess"
 };
 
+// 2015: 
+// Scott gives a gift to Jane
+// Chris gives a gift to Jess
+// Sally gives a gift to Chris
+// Mary gives a gift to Scott
+// Allen gives a gift to Katie
+// Rod gives a gift to Allen
+// Molly gives a gift to Sally
+// Jane gives a gift to Mary
+// Katie gives a gift to Rod
+// Jess gives a gift to Molly
+
 // 2014: 
 // Sally gives a gift to Jane
 // Jess gives a gift to Scott
@@ -84,40 +96,40 @@ var couples = {
 // Scott gives a gift to Rod.
 
 var history = {
-/*    2009: {
-        "Allen": "Jane",
-        "Jane": "Sally",
-        "Jess": "Molly",
-        "Katie": "Allen",
-        "Mary": "Jess",
-        "Molly": "Katie",
-        "Rod": "Mary",
-        "Sally": "Scott",
-        "Scott": "Rod"
-    },
-    2010: {
-        "Allen": "Rod",
-        "Jane": "Scott",
-        "Jess": "Katie",
-        "Katie": "Sally",
-        "Mary": "Molly",
-        "Molly": "Jane",
-        "Rod": "Allen",
-        "Sally": "Mary",
-        "Scott": "Jess"
-    },
-    2011: {
-        "Allen": "Katie",
-        "Jane": "Mary",
-        "Jess": "Jane",
-        "Katie": "Rod",
-        "Mary": "Jess",
-        "Molly": "Sally",
-        "Rod": "Scott",
-        "Sally": "Allen",
-        "Scott": "Molly"
-    },
-*/
+    /*    2009: {
+            "Allen": "Jane",
+            "Jane": "Sally",
+            "Jess": "Molly",
+            "Katie": "Allen",
+            "Mary": "Jess",
+            "Molly": "Katie",
+            "Rod": "Mary",
+            "Sally": "Scott",
+            "Scott": "Rod"
+        },
+        2010: {
+            "Allen": "Rod",
+            "Jane": "Scott",
+            "Jess": "Katie",
+            "Katie": "Sally",
+            "Mary": "Molly",
+            "Molly": "Jane",
+            "Rod": "Allen",
+            "Sally": "Mary",
+            "Scott": "Jess"
+        },
+        2011: {
+            "Allen": "Katie",
+            "Jane": "Mary",
+            "Jess": "Jane",
+            "Katie": "Rod",
+            "Mary": "Jess",
+            "Molly": "Sally",
+            "Rod": "Scott",
+            "Sally": "Allen",
+            "Scott": "Molly"
+        },
+    */
     2012: {
         "Allen": "Jane",
         "Jane": "Jess",
@@ -150,6 +162,18 @@ var history = {
         "Mary": "Sally",
         "Scott": "Allen",
         "Katie": "Molly"
+    },
+    2015: {
+        "Scott": "Jane",
+        "Chris": "Jess",
+        "Sally": "Chris",
+        "Mary": "Scott",
+        "Allen": "Katie",
+        "Rod": "Allen",
+        "Molly": "Sally",
+        "Jane": "Mary",
+        "Katie": "Rod",
+        "Jess": "Molly"
     }
 };
 
@@ -157,4 +181,3 @@ var assignments = run(santas, couples, history);
 
 console.log("Un-Secret Santa for Christmas " + new Date().getFullYear());
 console.log("Results: ", JSON.stringify(assignments, null, 4));
-
