@@ -17,6 +17,20 @@ var couples = {
     "Sally": "Jess"
 };
 
+// 2016:
+// {
+//     "Mary": "Chris",
+//     "Allen": "Sally",
+//     "Jess": "Rod",
+//     "Jane": "Katie",
+//     "Scott": "Molly",
+//     "Molly": "Jane",
+//     "Sally": "Scott",
+//     "Rod": "Mary",
+//     "Katie": "Jess",
+//     "Chris": "Allen"
+// }
+
 // 2015: 
 // Scott gives a gift to Jane
 // Chris gives a gift to Jess
@@ -174,6 +188,18 @@ var history = {
         "Jane": "Mary",
         "Katie": "Rod",
         "Jess": "Molly"
+    },
+    2016: {
+        "Mary": "Chris",
+        "Allen": "Sally",
+        "Jess": "Rod",
+        "Jane": "Katie",
+        "Scott": "Molly",
+        "Molly": "Jane",
+        "Sally": "Scott",
+        "Rod": "Mary",
+        "Katie": "Jess",
+        "Chris": "Allen"
     }
 };
 
