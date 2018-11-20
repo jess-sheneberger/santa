@@ -143,7 +143,6 @@ var history = {
             "Sally": "Allen",
             "Scott": "Molly"
         },
-    */
     2012: {
         "Allen": "Jane",
         "Jane": "Jess",
@@ -154,7 +153,7 @@ var history = {
         "Rod": "Jess",
         "Sally": "Molly",
         "Scott": "Rod"
-    },
+    },*/
     2013: {
         "Rod": "Sally",
         "Jess": "Allen",
@@ -200,6 +199,18 @@ var history = {
         "Rod": "Mary",
         "Katie": "Jess",
         "Chris": "Allen"
+    },
+    2017:  {
+        "Chris": "Katie",
+        "Sally": "Rod",
+        "Molly": "Chris",
+        "Allen": "Molly",
+        "Scott": "Sally",
+        "Jane": "Allen",
+        "Jess": "Jane",
+        "Katie": "Mary",
+        "Mary": "Jess",
+        "Rod": "Scott"
     }
 };
 
