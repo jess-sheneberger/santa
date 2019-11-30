@@ -265,7 +265,7 @@ var history = {
         "Katie": "Mary",
         "Mary": "Jess",
         "Rod": "Scott"
-    },*/
+    },
     2018: {
         "Sally": "Molly",
         "Katie": "Sally",
@@ -277,14 +277,31 @@ var history = {
         "Rod": "Chris",
         "Jess": "Katie",
         "Allen": "Rod"
+    },*/
+    2019: {
+        "Jane": "Molly",
+        "Katie": "Jane",
+        "Sally": "Katie",
+        "Molly": "Sally"
     }
 };
+
+let juniorHistory = {
+    2019:  {
+        "Claire": "Eloise",
+        "Charlie": "Claire",
+        "Ellen": "Bode",
+        "Michael": "Charlie",
+        "Eloise": "Ellen",
+        "Bode": "Michael"
+    }    
+}
 
 flags.defineBoolean("junior", false, "Run Junior Secret Santa");
 flags.parse();
 
 if (flags.get("junior")) {
-    var jrAssn = run(juniorSantas, juniorSibs, {});
+    var jrAssn = run(juniorSantas, juniorSibs, juniorHistory);
 
     console.log("Junior Un-Secret Santa for Christmas " + new Date().getFullYear());
     console.log("Results: ", JSON.stringify(jrAssn, null, 4));
