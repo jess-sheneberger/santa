@@ -6,5 +6,8 @@
   "devDependencies": {
     "mocha": "^2.3.4",
     "should": "^7.1.1"
+  },
+  "dependencies": {
+    "flags": "^0.1.3"
   }
 }

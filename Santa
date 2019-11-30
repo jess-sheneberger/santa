@@ -1,8 +1,29 @@
 ﻿#!/usr/bin/env node
 
+var flags = require("flags");
 var run = require('.');
 
-var santas = ["Allen", "Chris", "Jane", "Jess", "Katie", "Mary", "Molly", "Rod", "Sally", "Scott"];
+var santas = [
+    // "Allen", 
+    // "Chris", 
+    // "Jess", 
+    // "Mary", 
+    // "Rod", 
+    // "Scott"
+    "Jane", 
+    "Katie", 
+    "Molly", 
+    "Sally"
+];
+
+var juniorSantas = [
+    "Bode",
+    "Charlie",
+    "Claire",
+    "Ellen",
+    "Eloise",
+    "Michael"
+];
 
 var couples = {
     "Jane": "Chris",
@@ -16,6 +37,39 @@ var couples = {
     "Rod": "Molly",
     "Sally": "Jess"
 };
+
+var juniorSibs = {
+    "Claire": "Ellen",
+    "Ellen": "Claire",
+    "Eloise": "Michael",
+    "Michael": "Eloise"
+}
+
+// 2018: {
+//     "Sally": "Molly",
+//     "Katie": "Sally",
+//     "Scott": "Jess",
+//     "Mary": "Jane",
+//     "Jane": "Scott",
+//     "Molly": "Allen",
+//     "Chris": "Mary",
+//     "Rod": "Chris",
+//     "Jess": "Katie",
+//     "Allen": "Rod"
+// }
+
+// 2017:  {
+//     "Chris": "Katie",
+//     "Sally": "Rod",
+//     "Molly": "Chris",
+//     "Allen": "Molly",
+//     "Scott": "Sally",
+//     "Jane": "Allen",
+//     "Jess": "Jane",
+//     "Katie": "Mary",
+//     "Mary": "Jess",
+//     "Rod": "Scott"
+// }
 
 // 2016:
 // {
@@ -153,7 +207,7 @@ var history = {
         "Rod": "Jess",
         "Sally": "Molly",
         "Scott": "Rod"
-    },*/
+    },
     2013: {
         "Rod": "Sally",
         "Jess": "Allen",
@@ -199,7 +253,7 @@ var history = {
         "Rod": "Mary",
         "Katie": "Jess",
         "Chris": "Allen"
-    },
+    },*/
     2017:  {
         "Chris": "Katie",
         "Sally": "Rod",
@@ -211,10 +265,34 @@ var history = {
         "Katie": "Mary",
         "Mary": "Jess",
         "Rod": "Scott"
+    },
+    2018: {
+        "Sally": "Molly",
+        "Katie": "Sally",
+        "Scott": "Jess",
+        "Mary": "Jane",
+        "Jane": "Scott",
+        "Molly": "Allen",
+        "Chris": "Mary",
+        "Rod": "Chris",
+        "Jess": "Katie",
+        "Allen": "Rod"
     }
 };
 
-var assignments = run(santas, couples, history);
+flags.defineBoolean("junior", false, "Run Junior Secret Santa");
+flags.parse();
 
-console.log("Un-Secret Santa for Christmas " + new Date().getFullYear());
-console.log("Results: ", JSON.stringify(assignments, null, 4));
+if (flags.get("junior")) {
+    var jrAssn = run(juniorSantas, juniorSibs, {});
+
+    console.log("Junior Un-Secret Santa for Christmas " + new Date().getFullYear());
+    console.log("Results: ", JSON.stringify(jrAssn, null, 4));
+    
+} else {
+    var assignments = run(santas, couples, history);
+
+    console.log("Un-Secret Santa for Christmas " + new Date().getFullYear());
+    console.log("Results: ", JSON.stringify(assignments, null, 4));
+} 
+
