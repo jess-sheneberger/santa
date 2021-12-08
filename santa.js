@@ -1,15 +1,14 @@
-﻿#!/usr/bin/env node
-
+﻿
 var flags = require("flags");
 var run = require('.');
 
 var santas = [
-    // "Allen", 
-    // "Chris", 
-    // "Jess", 
-    // "Mary", 
-    // "Rod", 
-    // "Scott"
+    "Allen", 
+    "Chris", 
+    "Jess", 
+    "Mary", 
+    "Rod", 
+    "Scott",
     "Jane", 
     "Katie", 
     "Molly", 
@@ -17,6 +16,7 @@ var santas = [
 ];
 
 var juniorSantas = [
+    "Tate",
     "Bode",
     "Charlie",
     "Claire",
@@ -42,7 +42,9 @@ var juniorSibs = {
     "Claire": "Ellen",
     "Ellen": "Claire",
     "Eloise": "Michael",
-    "Michael": "Eloise"
+    "Michael": "Eloise",
+    "Bode": "Tate",
+    "Tate": "Bode"
 }
 
 // 2018: {
@@ -287,6 +289,16 @@ var history = {
 };
 
 let juniorHistory = {
+    2021: {
+        "Eloise": "Charlie",
+        "Bode": "Eloise",
+        "Tate": "Claire",
+        "Claire": "Michael",
+        "Michael": "Ellen",
+        "Ellen": "Tate",
+        "Charlie": "Bode"
+    },
+    2020: {},
     2019:  {
         "Claire": "Eloise",
         "Charlie": "Claire",
