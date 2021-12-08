@@ -298,7 +298,6 @@ let juniorHistory = {
         "Ellen": "Tate",
         "Charlie": "Bode"
     },
-    2020: {},
     2019:  {
         "Claire": "Eloise",
         "Charlie": "Claire",
